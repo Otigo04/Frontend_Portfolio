@@ -1,0 +1,60 @@
+/* Universalselector */
+* {
+    color:rgb(28, 26, 26);
+}
+
+h1{
+    font-size:2.5rem;
+    color:rgb(107, 40, 40);
+}
+
+h2, h3 {
+    color:rgb(107, 40, 40);
+    font-size:1.5rem;
+
+}
+
+/* Pseudoklassen */
+:root{
+    font-family:Arial;
+    font-size: 1rem;
+}
+
+/* Typselektor */
+code{
+    font-family:monospace;
+}
+
+/* Pseudo Elemente */
+p::selection{
+    background:hsl(0, 93%, 46%)
+}
+
+/* Klasse */
+.headline{
+    text-transform:uppercase;
+    text-decoration:underline dashed;
+}
+
+.picture-galery{
+    width:50%;
+    height:auto;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+
+    align-items:center;
+}
+
+/* Attributselektor */
+[title="whoamiparagraph"]{
+    font-family:monserat, sans-serif;
+    color:rgba(149, 6, 6, 0.739)
+}
+
+#whoami{
+    border:3px solid black;
+    font-size:95%;
+    font-weight:bold;
+
+}
