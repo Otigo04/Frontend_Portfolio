@@ -42,12 +42,31 @@
               <option value="Frau">Frau</option>
               <option value="Divers">Divers</option>
             </select>
-            <label for="name">Name:</label>
+            <label for="vorname">Vorname:</label>
             <input
               type="text"
-              id="name"
-              name="name"
-              placeholder="Dein Name..."
+              id="vorname"
+              name="firstname"
+              placeholder="Dein Vorname..."
+              maxlength="25"
+              required
+            />
+            <label for="nachname">Nachname:</label>
+            <input
+              type="text"
+              id="nachname"
+              name="lastname"
+              placeholder="Dein Nachname..."
+              maxlength="25"
+              required
+            />
+            <label for="geburtsdatum">Geburtsdatum:</label>
+            <input
+              type="date"
+              id="geburtsdatum"
+              name="dateofbirth"
+              max="2005-01-01"
+              min="1900-01-01"
               required
             />
             <label for="email">E-Mail:</label>
@@ -64,8 +83,18 @@
               id="phone"
               name="phone"
               placeholder="Deine Telefonnummer..."
+              pattern="[0-9]{6,15}"
               required
             />
+
+            <label for="websitelang">Webseitesprache?</label>
+            <input list="websitelangchoose" id="websitelang" name="websitelang" required/>
+            <datalist id="websitelangchoose">
+              <option value="deutsch"></option>
+              <option value="englisch"></option>
+              <option value="türkisch"></option>
+              <option value="französisch"></option>
+            </datalist>
 
             <fieldset>
               <legend>Welche Art von Webseite benötigst du?</legend>
@@ -76,8 +105,10 @@
                 value="Portfolio"
               />
               <label for="portfolio">Portfolio</label>
+
               <input type="radio" id="blog" name="websitestyle" value="Blog" />
               <label for="blog">Blog</label>
+              
               <input
                 type="radio"
                 id="onlineshop"
@@ -92,6 +123,9 @@
                 value="Landingpage"
               />
               <label for="landingpage">Landingpage</label>
+
+              <input type="radio" id="sonstiges" name="websitestyle" value="Sonstiges" />
+              <label for="sonstiges">Sonstiges</label>
             </fieldset>
 
             <label for="message">Nachricht:</label>
@@ -111,8 +145,7 @@
               value="Ja"
             />
             <label for="newsletter"
-              >Ich möchte den Newsletter abonnieren.</label
-            >
+              >(optional) Ich möchte den Newsletter abonnieren.</label>
 
             <input type="submit" value="Absenden" />
             <input type="reset" value="Zurücksetzen" />
