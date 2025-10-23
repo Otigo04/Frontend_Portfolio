@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <!-- Metainformationen -->
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Kontaktformular</title>
-    <meta name="author" content="Yakup Orhan Tas" />
-    <meta name="description" content="Kontaktformular" />
-    <link rel="stylesheet" href="styles/01styles.css" />
-    <link rel="fonts" href="styles/fonts.css" />
+    <meta name="author" content="Yakup Orhan Tas">
+    <meta name="description" content="Kontaktformular">
+    <link rel="stylesheet" href="styles/01styles.css">
+    <link rel="fonts" href="styles/fonts.css">
   </head>
 
   <body>
@@ -50,7 +49,7 @@
               placeholder="Dein Vorname..."
               maxlength="25"
               required
-            />
+            >
             <label for="nachname">Nachname:</label>
             <input
               type="text"
@@ -59,7 +58,7 @@
               placeholder="Dein Nachname..."
               maxlength="25"
               required
-            />
+            >
             <label for="geburtsdatum">Geburtsdatum:</label>
             <input
               type="date"
@@ -68,7 +67,7 @@
               max="2005-01-01"
               min="1900-01-01"
               required
-            />
+            >
             <label for="email">E-Mail:</label>
             <input
               type="email"
@@ -76,7 +75,7 @@
               name="email"
               placeholder="Deine E-Mail..."
               required
-            />
+            >
             <label for="phone">Telefon:</label>
             <input
               type="tel"
@@ -85,10 +84,15 @@
               placeholder="Deine Telefonnummer..."
               pattern="[0-9]{6,15}"
               required
-            />
+            >
 
             <label for="websitelang">Webseitesprache?</label>
-            <input list="websitelangchoose" id="websitelang" name="websitelang" required/>
+            <input
+              list="websitelangchoose"
+              id="websitelang"
+              name="websitelang"
+              required
+            >
             <datalist id="websitelangchoose">
               <option value="deutsch"></option>
               <option value="englisch"></option>
@@ -103,28 +107,33 @@
                 id="portfolio"
                 name="websitestyle"
                 value="Portfolio"
-              />
+              >
               <label for="portfolio">Portfolio</label>
 
-              <input type="radio" id="blog" name="websitestyle" value="Blog" />
+              <input type="radio" id="blog" name="websitestyle" value="Blog">
               <label for="blog">Blog</label>
-              
+
               <input
                 type="radio"
                 id="onlineshop"
                 name="websitestyle"
                 value="Onlineshop"
-              />
+              >
               <label for="onlineshop">Onlineshop</label>
               <input
                 type="radio"
                 id="landingpage"
                 name="websitestyle"
                 value="Landingpage"
-              />
+              >
               <label for="landingpage">Landingpage</label>
 
-              <input type="radio" id="sonstiges" name="websitestyle" value="Sonstiges" />
+              <input
+                type="radio"
+                id="sonstiges"
+                name="websitestyle"
+                value="Sonstiges"
+              >
               <label for="sonstiges">Sonstiges</label>
             </fieldset>
 
@@ -143,12 +152,12 @@
               id="newsletter"
               name="newsletter"
               value="Ja"
-            />
+            >
             <label for="newsletter"
-              >(optional) Ich möchte den Newsletter abonnieren.</label>
-
-            <input type="submit" value="Absenden" />
-            <input type="reset" value="Zurücksetzen" />
+              >(optional) Ich möchte den Newsletter abonnieren.</label
+            >
+            <input type="submit" value="Absenden">
+            <input type="reset" value="Zurücksetzen">
           </fieldset>
         </form>
       </article>
