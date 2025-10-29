@@ -1,29 +1,70 @@
 /* Universalselector */
-* {
-    color:rgb(28, 26, 26);
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
 }
 
-h1{
-    font-size:2.5rem;
-    color:rgb(107, 40, 40);
+/* Root */
+:root {
+    
+    --main-backgroundcolor: rgb(192, 243, 243);
+    --secondary-backgroundcolor: rgb(222, 225, 230);
+
+    --main-fontcolor: rgb(59, 55, 55);
+    --secondary-fontcolor:rgb(0, 0, 0);
+    --third-fontcolor:rgb(56, 46, 145);   
+    text-align: center; 
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
 }
 
-h2, h3 {
-    color:rgb(107, 40, 40);
-    font-size:1.5rem;
+nav {
+    border-bottom: 2px solid #000000;
+}
+
+nav ul {
+    list-style:none;
+    padding:15px 0;
+    display:flex;
+    justify-content: center;
+    margin: 0 auto;
 
 }
 
-/* Pseudoklassen */
-:root{
-    font-family:Arial;
-    font-size: 1rem;
+nav li {
+    /*background:var(--secondary-backgroundcolor); sieht nicht gut aus*/
+    margin: 1%;
+    
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    color:var(--secondary-fontcolor);
+    padding: 5px 0;
+    transition: rgb(88, 0, 252) 0.3 ease; /*übergang smooth*/
+}
+
+nav a:hover,
+nav a:focus {
+    color:rgb(0, 123, 255)
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* Typselektor */
-code{
-    font-family:monospace;
+p{
+    max-width: 120ch;
+    margin: 0 auto;
 }
+
+
 
 /* Pseudo Elemente */
 p::selection{
@@ -33,28 +74,62 @@ p::selection{
 /* Klasse */
 .headline{
     text-transform:uppercase;
-    text-decoration:underline dashed;
+    text-decoration:underline solid;
 }
 
 .picture-galery{
-    width:50%;
+    width: 90%;
     height:auto;
     display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-
+    flex-wrap: wrap;
+    gap:15px;
     align-items:center;
+    border: 3px solid rgb(28, 26, 26);
+    padding: 5px;
+    border-radius: 10px;
+    background-color: var(--secondary-backgroundcolor);
+    margin: 0 auto; /*setzt links und rechts auf auto*/
 }
 
-/* Attributselektor */
-[title="whoamiparagraph"]{
-    font-family:monserat, sans-serif;
-    color:rgba(149, 6, 6, 0.739)
+.picture-galery img {
+    flex: 1 1 200px; /* 1 schrumpfen 1 wachsen basisbreite 200px*/
+    max-width: 100%;
+    height: auto;
 }
+.picture-galery p {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 
 #whoami{
     border:3px solid black;
     font-size:95%;
-    font-weight:bold;
 
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,td {
+    padding: 0.5em 1em;
+    border-bottom: 2px solid var(--third-fontcolor);
+    text-align: left;
+}
+
+tr:hover { /*hover über abschnitt*/
+    background-color: var(--secondary-backgroundcolor);
+    cursor: pointer; /* Zeigt an das Interativ ist, auch wenn nicht ist*/
+}
+
+caption {
+    padding-top: 2em;
+    padding-bottom: 1em;
+    font-size:2rem;
+    font-weight: bold;
+    
 }

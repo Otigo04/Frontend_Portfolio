@@ -1,3 +1,66 @@
-:root{
-    font-size: 16px;
+/* Variablen: Custom Properties */
+
+:root {
+  font-family: sans-serif;
+  /* Ausgangsgröße */
+  /* font-size: 12px; */
+  /* besser: in rem, sonst überschreiben wir user styles 
+  Überprüfung in Chrome: Settings, font size */
+  font-size: 1rem;
+  /* globale Variable */
+
+  --main-backgroundcolor: rgb(192, 243, 243);
+  --secondary-backgroundcolor: rgb(222, 225, 230);
+
+  --main-fontcolor: rgb(59, 55, 55);
+  --secondary-fontcolor:rgb(0, 0, 0);
+  --third-fontcolor:rgb(56, 46, 145);   
+
+  background-color: var(--main-backgroundcolor);
 }
+
+h1 {
+  font-size: 3rem;
+  /* Aufruf */
+  background: var(--main-color);
+}
+
+h2 {
+  font-size: 2.3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+    font-size: 60ch;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-size: 1.3rem;
+}
+
+article,
+p,
+strong,
+ul,
+li,
+code,
+table,
+tr,
+td,
+a {
+  font-size: 1.5rem;
+}
+
+/* Attributselektor */
+[title="whoamiparagraph"]{
+    font-family:sans-serif;
+    color:var(--main-fontcolor)
+}
+
