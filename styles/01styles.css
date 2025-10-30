@@ -78,7 +78,7 @@ p{
 
 /* Pseudo Elemente */
 p::selection{
-    background:hsl(0, 93%, 46%)
+    background:hsl(0, 3%, 65%)
 }
 
 /* Klasse */
@@ -115,21 +115,27 @@ p::selection{
 }
 
 
-#whoami{
-    border:3px solid black;
-    font-size:95%;
+#whoami > p{
+    border-bottom:1px solid black;
+    padding-bottom: var(--spacing-large);
 
 }
 
 table {
-    border-collapse: collapse;
     width: 100%;
+    border-collapse: collapse;
+
 }
 
 th,td {
     padding: 0.5em 1em;
-    border-bottom: 2px solid var(--third-fontcolor);
     text-align: left;
+    border-bottom: 1px solid hsl(0, 0%, 0%);
+
+}
+
+tr:nth-child(even) {
+    background-color: rgb(196, 213, 244)
 }
 
 tr:hover { /*hover über abschnitt*/
@@ -207,4 +213,19 @@ textarea {
     height: 200px;
     width: 100%;
     padding:var(--spacing-medium);
+}
+
+#contactbottom {
+    margin-top: var(--spacing-xlarge);
+    padding-top: var(--spacing-medium);
+    border-top: 2px solid black;
+    font-size: 1.2rem;
+
+}
+
+.footer {
+    padding-top: var(--spacing-large);
+    border-top: 2px solid black;
+    font-size: 1rem;
+    padding: var(--spacing-large);
 }
