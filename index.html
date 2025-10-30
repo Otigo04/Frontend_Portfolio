@@ -8,7 +8,7 @@
   <meta name="author" content="Yakup Orhan Tas">
   <meta name="description" content="Mein digitales Portfolio">
   <link rel="stylesheet" href="styles/01styles.css">
-  <link rel="fonts" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/fonts.css">
 </head>
 
 <body>
@@ -17,7 +17,8 @@
     <h1 class="headline">Yakup Orhan Tas</h1>
     <h2>Herzlich Willkommen auf meinem digitalen Portfolio!</h2>
   </header>
-  <nav>
+  <nav id="navigation">
+    <p id="nagivationtext">Navigation</p>
     <ul>
       <li><a href="#whoami">Wer bin ich?</a></li>
       <li><a href="#projectscreenshots">Projekte</a></li>
@@ -36,6 +37,7 @@
         Ich bin sehr motiviert und freue mich darauf, meine Fähigkeiten in der Praxis anzuwenden und
         weiterzuentwickeln.
         In der folgenden Tabelle siehst du einige meiner Projekte:</p>
+      <div id="table">
       <table>
         <caption>Schulische Laufbahn</caption>
         <tr>
@@ -45,30 +47,31 @@
           <th>Note</th>
         </tr>
         <tr>
-          <td>2016-2022 ||</td>
-          <td>Lessing-Gymnasium Berlin ||</td>
+          <td>2016-2022</td>
+          <td>Lessing-Gymnasium Berlin</td>
           <td>Hochschulreife erlangt</td>
           <td>&Oslash; 2,8</td>
         </tr>
         <tr>
-          <td>2022-2023 ||</td>
+          <td>2022-2023</td>
           <td>Medieninformatik Studium Technische Universität Berlin</td>
           <td>Anfang meines Medieninformatikstudiums!</td>
           <td>&Oslash; -</td>
 
         <tr>
-          <td>2024-2027 ||</td>
+          <td>2024-2027</td>
           <td>Medieninformatik Studium Berliner Hochschule für Technik</td>
           <td>Voraussichtlicher Abschluss in Medieninformatik B. Sc.!</td>
           <td>&Oslash; zurzeit 2,6</td>
 
         </tr>
       </table>
+      </div>
     </article>
     <article id="projectscreenshots">
         <h2>Einige Screenshots meiner aktuellen Projekte</h2>
-        <p>Asteroids Minispiel</p>
         <div class="picture-galery">
+        <p>Asteroids Minispiel</p>
         <img src="images/asteroids1.png" alt="asteroids1">
         <img src="images/asteroids2.png" alt="asteroids2">
         <p>Rogue Regression</p>
@@ -96,6 +99,7 @@
     <article id="contact">
         <h2>Kontaktiere mich!</h2>
         <a href="forms.html">Kontaktformular</a>
+        </article>
 
   </main>
   <aside>
