@@ -11,10 +11,19 @@
     
     --main-backgroundcolor: rgb(192, 243, 243);
     --secondary-backgroundcolor: rgb(222, 225, 230);
+    --third-backgroundcolor:rgb(113, 102, 218);
+
 
     --main-fontcolor: rgb(59, 55, 55);
     --secondary-fontcolor:rgb(0, 0, 0);
-    --third-fontcolor:rgb(56, 46, 145);   
+    
+    --border-radius:6px;
+
+    --spacing-small: 0,5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+    --spacing-xlarge: 3rem;
+
     text-align: center; 
     font-weight: lighter;
     font-family: Arial, Helvetica, sans-serif;
@@ -28,6 +37,7 @@ nav {
 nav ul {
     list-style:none;
     padding:15px 0;
+    padding-top:10px;
     display:flex;
     justify-content: center;
     margin: 0 auto;
@@ -82,13 +92,14 @@ p::selection{
     height:auto;
     display:flex;
     flex-wrap: wrap;
-    gap:15px;
+    gap: var(--spacing-medium);
+    justify-content:center;
     align-items:center;
     border: 3px solid rgb(28, 26, 26);
-    padding: 5px;
+    padding: var(--spacing-medium);
     border-radius: 10px;
     background-color: var(--secondary-backgroundcolor);
-    margin: 0 auto; /*setzt links und rechts auf auto*/
+    margin: 0 auto; /*setzt links und rechts auf auto, zentriert galery*/
 }
 
 .picture-galery img {
@@ -127,9 +138,73 @@ tr:hover { /*hover über abschnitt*/
 }
 
 caption {
-    padding-top: 2em;
-    padding-bottom: 1em;
+    padding-top: var(--spacing-large);
+    padding-bottom: var(--spacing-medium);
     font-size:2rem;
     font-weight: bold;
     
+}
+
+input {
+    width: 100%;
+    padding:var(--spacing-medium);
+    margin: var(--spacing-small) 0;
+    border: 1px solid var(--third-fontcolor);
+}
+
+#websitetypes {
+    text-align: left;
+    display:flex;
+    margin-top: 0;
+    margin-bottom: var(--spacing--medium);
+    font-size: 1rem;
+}
+
+#contact {
+    gap: var(--spacing-medium);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1.5rem;
+    
+}
+#introductionsentence {
+    margin-bottom: var(--spacing-xlarge);
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    border-bottom: 0;
+    font-size: 1.2rem;
+    transition: width 0.4s ease-in-out;
+
+}
+
+input[type="submit"]:hover {
+    background-color: var(--third-backgroundcolor);
+}
+
+input[type="reset"] {
+    cursor: pointer;
+    border-bottom: 0;
+    font-size: 1.2rem;
+    transition: width 0.4s ease-in-out;
+
+}
+
+
+input[type="reset"]:hover {
+    background-color: var(--third-backgroundcolor);
+}
+
+datalist {
+    width: 100%;
+    padding: var(--spacing-medium) var(--spacing-medium);
+    
+}
+
+textarea {
+    height: 200px;
+    width: 100%;
+    padding:var(--spacing-medium);
 }

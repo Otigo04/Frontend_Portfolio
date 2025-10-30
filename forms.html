@@ -2,12 +2,12 @@
 <html lang="de">
   <head>
     <!-- Metainformationen -->
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Kontaktformular</title>
-    <meta name="author" content="Yakup Orhan Tas" />
-    <meta name="description" content="Kontaktformular" />
-    <link rel="stylesheet" href="styles/01styles.css" />
-    <link rel="stylesheet" href="styles/fonts.css" />
+    <meta name="author" content="Yakup Orhan Tas">
+    <meta name="description" content="Kontaktformular">
+    <link rel="stylesheet" href="styles/01styles.css">
+    <link rel="stylesheet" href="styles/fonts.css">
   </head>
 
   <body>
@@ -23,6 +23,7 @@
 
       <article id="contact">
         <h2>Kontaktiere mich!</h2>
+        <div id="introductionsentence">
         <p>
           Du kannst mich jederzeit per E-Mail unter
           <em>orhantas3818@outlook.de</em>
@@ -33,6 +34,7 @@
           <a href="https://github.com/Otigo04">https://github.com/Otigo04</a>
         </p>
         <p>oder Kontaktiere mich über folgendes Formular direkt:</p>
+        </div>
         <form action="index.html" method="get">
           <fieldset>
             <legend>Kontaktformular</legend>
@@ -50,7 +52,7 @@
               placeholder="Dein Vorname..."
               maxlength="25"
               required
-            />
+            >
             <label for="nachname">Nachname:</label>
             <input
               type="text"
@@ -88,7 +90,7 @@
             >
 
             <label for="websitelang">Webseitesprache?</label>
-            <input list="websitelangchoose" id="websitelang" name="websitelang" required/>
+            <input list="websitelangchoose" id="websitelang" name="websitelang" placeholder="bitte auswählen" required>
             <datalist id="websitelangchoose">
               <option value="deutsch"></option>
               <option value="englisch"></option>
@@ -98,6 +100,7 @@
 
             <fieldset>
               <legend>Welche Art von Webseite benötigst du?</legend>
+              <div id="websitetypes">
               <input
                 type="radio"
                 id="portfolio"
@@ -124,8 +127,9 @@
               >
               <label for="landingpage">Landingpage</label>
 
-              <input type="radio" id="sonstiges" name="websitestyle" value="Sonstiges" />
+              <input type="radio" id="sonstiges" name="websitestyle" value="Sonstiges">
               <label for="sonstiges">Sonstiges</label>
+              </div>
             </fieldset>
 
             <label for="message">Nachricht:</label>
@@ -147,8 +151,8 @@
             <label for="newsletter"
               >(optional) Ich möchte den Newsletter abonnieren.</label>
 
-            <input type="submit" value="Absenden" />
-            <input type="reset" value="Zurücksetzen" />
+            <input type="submit" value="Absenden">
+            <input type="reset" value="Zurücksetzen">
           </fieldset>
         </form>
       </article>
