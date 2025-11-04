@@ -8,25 +8,35 @@
   <meta name="author" content="Yakup Orhan Tas">
   <meta name="description" content="Mein digitales Portfolio">
   <link rel="stylesheet" href="styles/01styles.css">
-  <link rel="stylesheet" href="styles/fonts.css">
+  
 </head>
 
 <body>
-  <!-- Informationen für Anwender im Browserfenster (viewport) -->
-  <header id="header">
-    <h1 class="headline">Yakup Orhan Tas</h1>
-    <h2>Herzlich Willkommen auf meinem digitalen Portfolio!</h2>
-  </header>
-  <nav id="navigation">
-    <ul>
-      <li><a href="#whoami">Wer bin ich?</a></li>
-      <li><a href="#projectscreenshots">Projekte</a></li>
-      <li><a href="forms.html">Kontaktformular</a></li>
-    </ul>
-  </nav>
+
+  <div class="container">
+      <header class="main-header">
+          <nav class="main-nav">
+            <ul>
+              <li><a href="#whoami">Wer bin ich?</a></li>
+              <li><a href="#projectscreenshots">Projekte</a></li>
+              <li><a href="forms.html">Kontaktformular</a></li>
+            </ul>
+          </nav>
+        </header>
+    </div>
   <main>
 
-    <article id="whoami">
+    <section class="hero container"> 
+      <h1 class="hero-title">
+        Yakup Orhan Tas - Mein Portfolio
+      </h1>
+      <p class="hero-subtitle">
+        Lernt modernes Webdesign.
+      </p>
+    </section>
+
+    <article id="whoami" class="container">
+
       <h2>Wer bin ich überhaupt?</h2>
       <p title="whoamiparagraph">Mein Name ist Yakup Orhan Tas. aktuell studiere ich Medieninformatik an der Berliner Hochschule
         für Technik in Berlin im 4. Fachsemester. Mein Hauptinteresse ist das Web Development sowie das
@@ -67,19 +77,56 @@
       </table>
       </div>
     </article>
-    <article id="projectscreenshots">
-        <h2>Einige Screenshots meiner aktuellen Projekte</h2>
-        <div class="picture-galery">
-        <p>Asteroids Minispiel</p>
-        <img src="images/asteroids1.png" alt="asteroids1">
-        <img src="images/asteroids2.png" alt="asteroids2">
-        <p>Rogue Regression</p>
-        <img src="images/rogue1.png" alt="rogue1">
-        <img src="images/rogue2.png" alt="rogue2">
-        <img src="images/rogue3.png" alt="rogue3"></div>
+    <article id="projekte" class="container">
+
+        <h2 class="section-title">Einige Screenshots meiner aktuellen Projekte</h2>
+
+        <div class="portfolio-grid">
+          <a href="#" class="project-card">  
+            <img src="images/asteroids1.png" alt="asteroids1" class="project-card-image">
+            <div class="project-card-info">
+              <h3 class="project-card-title">Astronauts Gameplay</h3>
+            </div>
+          </a>
+
+          <div class="portfolio-grid">
+          <a href="#" class="project-card">  
+            <img src="images/asteroids2.png" alt="asteroids2" class="project-card-image">
+            <div class="project-card-info">
+              <h3 class="project-card-title">Astronauts Deathscreen</h3>
+            </div>
+          </a>
+
+          <div class="portfolio-grid">
+          <a href="#" class="project-card">  
+            <img src="images/rogue1.png" alt="rogue1" class="project-card-image">
+            <div class="project-card-info">
+              <h3 class="project-card-title">RR Gamestart</h3>
+            </div>
+          </a>
+
+          <div class="portfolio-grid">
+          <a href="#" class="project-card">  
+            <img src="images/rogue2.png" alt="rogue2" class="project-card-image">
+            <div class="project-card-info">
+              <h3 class="project-card-title">RR UI-Elemente</h3>
+            </div>
+          </a>
+
+          <div class="portfolio-grid">
+          <a href="#" class="project-card">  
+            <img src="images/rogue3.png" alt="rogue3" class="project-card-image"></div>
+            <div class="project-card-info">
+              <h3 class="project-card-title">RR Level Generation</h3>
+            </div>
+          </a>
+
+          
+            
+            
 
     </article>
-    <article id="focus">
+    <article id="focus" class="container">
       <h2>Fokus auf Web-Development und Spieleentwicklung.</h2>
         <p>Meine Projekte versuchen eine breite Palette der Moeglichkeiten im Web Development sowie
           in der Spieleentwicklung
@@ -95,10 +142,11 @@
       </p>
     </article>
 
-        <div class="footer">
-          <a href="forms.html">Kontaktformular</a>
-          <p><a href="impressum.html">Impressum</a></p>
-        </div>
+        <footer class="footer">
+          <ul class="footerlinks">
+            <li><a href="forms.html">Kontaktformular</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+        </footer>
 
   </main>
   <aside>
