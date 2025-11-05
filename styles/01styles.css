@@ -1,5 +1,3 @@
-/* Universalselector */
-
 *,
 *::after,
 *::before{
@@ -119,15 +117,15 @@ p {
 }
 
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ? */
+    display: flex;
+    flex-wrap: wrap;
     gap: var(--spacing-medium);
 }
 
 .project-card {
+    flex-basis: 300px;
     text-decoration: none;
     color: var(--color-text);
-    display: block;
     overflow: hidden;
 }
 .project-card:hover .project-card-image,
@@ -221,9 +219,7 @@ caption {
     gap: var(--spacing-medium);
 }
 
-input {
-    width: 100%;
-}
+
 
 input {
     width: 100%;
