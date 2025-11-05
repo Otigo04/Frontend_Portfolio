@@ -9,19 +9,33 @@
     <meta name="description" content="Kontaktformular">
     
     <link rel="stylesheet" href="styles/01styles.css">
-    <link rel="stylesheet" href="styles/fonts.css">
   </head>
 
   <body>
+
+    
+    <div class="container">
+      <header class="main-header">
+          <nav class="main-nav">
+            <ul>
+              <li><a href="index.html">Homepage</a></li>
+            </ul>
+          </nav>
+        </header>
+    </div>
+    
     <main>
-      <header id="header" class="container">
-        <h1 class="headline">Yakup Orhan Tas</h1>
-      </header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Zurück zur Startseite</a></li>
-        </ul>
-      </nav>
+
+      <section class="hero container">
+        <h1 class="hero-title">
+          Kontaktformular
+        </h1>
+        <p class="hero-subtitle">
+          Kontaktiere mich jederzeit!
+        </p>
+      </section>
+
+      <form action="index.html" method="get">
 
       <article id="contact">
         <h2>Kontaktiere mich!</h2>
@@ -37,7 +51,6 @@
         </p>
         <p>oder Kontaktiere mich über folgendes Formular direkt:</p>
         </div>
-        <form action="index.html" method="get">
           <fieldset>
             <legend>Kontaktformular</legend>
             <label for="title">Anrede</label>
@@ -100,7 +113,7 @@
               <option value="französisch"></option>
             </datalist>
 
-            <fieldset>
+            <fieldset id="art">
               <legend>Welche Art von Webseite benötigst du?</legend>
               <div id="websitetypes">
               <input
@@ -143,21 +156,25 @@
               cols="50"
               required
             ></textarea>
-
+            
+            <div class="newsletterclass">
             <input
               type="checkbox"
               id="newsletter"
               name="newsletter"
               value="Ja"
             >
-            <label for="newsletter"
+            <label for="newsletter" id="newslettertext"
               >(optional) Ich möchte den Newsletter abonnieren.</label>
+            </div>
 
             <input type="submit" value="Absenden">
             <input type="reset" value="Zurücksetzen">
           </fieldset>
+          </article>
         </form>
-      </article>
+        
+      
     </main>
   </body>
 </html>

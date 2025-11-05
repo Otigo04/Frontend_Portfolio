@@ -55,8 +55,13 @@ h3 {
 }
 
 p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5 rem;
     max-width: 80ch;
+}
+
+.paragraph1 {
+    margin-bottom: var(--spacing-large);
+    margin-top: var(--spacing-medium);
 }
 
 .container {
@@ -71,7 +76,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-medium);
+    padding: var(--spacing-medium) 0;
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -115,7 +120,7 @@ p {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minimax(300px, 1fr)); /* ? */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ? */
     gap: var(--spacing-medium);
 }
 
@@ -125,22 +130,29 @@ p {
     display: block;
     overflow: hidden;
 }
+.project-card:hover .project-card-image,
+.project-card:focus .project-card-image {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
 
 .project-card-image {
     width: 100%;
     height: 250px;
     object-fit: cover;
     background-color: var(--color-border);
-}
+    
+}   
 
 .project-card-info {
-    padding: 1rem;
+    margin: 0.5rem 0;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .project-card-title {
     font-size: var(--font-size-lg);
-    font-weight: 600;
-    margin-bottom: 0.25rem;
+    font-weight: 300;
+    
 }
 
 .section-title {
@@ -150,6 +162,169 @@ p {
     border-bottom: 1px solid var(--color-border);
     padding-bottom: 1rem;
 }
+
+#table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--spacing-medium);
+    font-size: var(--font-size-base);
+    text-align: left;
+}
+
+th {
+    font-weight: 700;
+    padding: var(--spacing-medium) var(--spacing-large);
+    color: var(--color-text);
+    border-bottom: 2px solid var(--color-border);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+td {
+    padding: var(--spacing-medium) var(--spacing-large);
+    border-bottom: 1px solid var(--color-border);
+}
+
+tbody tr:hover {
+    background-color: var(--color-border);
+    transition: var(--color-background) 0.3s ease;
+}
+
+caption {
+    margin-bottom: var(--spacing-medium);
+    font-weight: 700;
+    font-size: var(--font-size-xl);
+}
+
+.footer {
+    text-align: center;
+    padding: var(--spacing-medium);
+    border-top: 1px solid var(--color-border);
+    font-size: 0.875rem;
+    color: var(--color-accent);
+}
+
+.footer a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.footer a:hover,
+.footer a:focus {
+    text-decoration: underline;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-medium);
+}
+
+input {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 1em;
+    margin: var(--spacing-medium), 0;
+    display: block;
+
+}
+
+fieldset {
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-medium);
+    margin-bottom: var(--spacing-large);
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+legend {
+    font-weight: 700;
+    padding: 0 var(--spacing-medium);
+}
+
+#introductionsentence {
+    margin-bottom: var(--spacing-medium);
+}
+
+fieldset#art {
+    margin-top: 2rem;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    font-family: var(--font-family-sans);
+    
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-text);
+    box-shadow: 0 0 0 2px rgba(136, 136, 136, 0.2);
+}
+
+input#newsletter {
+    width: auto;
+    margin: auto;
+}
+
+#websitetypes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+#websitetypes > input[type="radio"] {
+    transform: scale(1.5);
+    cursor: pointer;
+    width: auto;
+}
+
+#websitetypes > label {
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.newsletterclass input[type="checkbox"] {
+    transform: scale(1.5);
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.newsletterclass label{
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    padding-top: 0;
+}
+
+.newsletterclass {
+    width: fit-content;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+
+
+
 
 
 
