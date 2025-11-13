@@ -2,43 +2,49 @@
 <html lang="de">
 
 <head>
-  <!-- Metainformationen -->
   <meta charset="UTF-8">
   <title>Portfolio - Yakup Orhan Tas</title>
   <meta name="author" content="Yakup Orhan Tas">
   <meta name="description" content="Mein digitales Portfolio">
-  <link rel="stylesheet" href="styles/01styles.css">
+
+  <link rel="stylesheet" href="css/styles.css">
   
 </head>
 
 <body>
 
-  <div class="container">
-      <header class="main-header">
-          <nav class="main-nav">
-            <ul>
-              <li><a href="#whoami">Wer bin ich?</a></li>
-              <li><a href="#projectscreenshots">Projekte</a></li>
-              <li><a href="forms.html">Kontaktformular</a></li>
-            </ul>
-          </nav>
-        </header>
-    </div>
+  <header class="main-header">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#whoami">Wer bin ich?</a></li>
+        <li><a href="#projekte">Projekte</a></li>
+        <li><a href="forms.html">Kontaktformular</a></li>
+      </ul>
+    </nav>
+  </header>
+    
   <main>
 
     <section class="hero container"> 
-      <h1 class="hero-title">
-        Yakup Orhan Tas - Mein Portfolio
+      <div>
+      <h1>
+        Yakup Orhan Tas
       </h1>
-      <p class="hero-subtitle">
+      <p>
         Modernes Web-Development
       </p>
+      </div>
+
+      <img src="images/portrait.JPG" alt="Yakup Orhan Tas">
+
     </section>
+
+
 
     <article id="whoami" class="container">
 
       <h2>Wer bin ich überhaupt?</h2>
-      <p title="whoamiparagraph" class="paragraph1">Mein Name ist Yakup Orhan Tas. aktuell studiere ich Medieninformatik an der Berliner Hochschule
+      <p title="whoamiparagraph">Mein Name ist Yakup Orhan Tas. Aktuell studiere ich Medieninformatik an der Berliner Hochschule
         für Technik in Berlin im 4. Fachsemester. Mein Hauptinteresse ist das Web Development sowie das
         entwickeln von Spielen. Aktuell bin ich im Lernprozess noch relativ am Anfang,
         aber ich freue mich darauf, meine Fähigkeiten und Kenntnisse in diesem Bereich weiter zu vertiefen
@@ -46,7 +52,7 @@
         Ich bin sehr motiviert und freue mich darauf, meine Fähigkeiten in der Praxis anzuwenden und
         weiterzuentwickeln.
         In der folgenden Tabelle siehst du einige meiner Projekte:</p>
-      <fieldset>
+      
       <div id="table">
       <table>
         <caption>Schulische Laufbahn</caption>
@@ -77,34 +83,50 @@
         </tr>
       </table>
       </div>
-      </fieldset>
     </article>
+    
     <article id="projekte" class="container">
 
-        <h2 class="section-title">Einige Screenshots meiner aktuellen Projekte</h2>
+        <h2>Einige Screenshots meiner aktuellen Projekte</h2>
 
         <div class="portfolio-grid">
-          <a href="#" class="project-card">  
+          <a href="#" class="project-card">
+            <span class="project-badge">In Arbeit</span>
             <img src="images/asteroids1.png" alt="asteroids1" class="project-card-image">
             <div class="project-card-info">
-              <h3 class="project-card-title">Astronauts Gameplay</h3>
+              <h3>Astronauts Gameplay</h3>
             </div>
           </a>
 
 
-            <a href="#" class="project-card">  
+            <a href="#" class="project-card">
+            <span class="project-badge">In Arbeit</span>
               <img src="images/asteroids2.png" alt="asteroids2" class="project-card-image">
               <div class="project-card-info">
-                <h3 class="project-card-title">Astronauts Deathscreen</h3>
+                <h3>Astronauts Deathscreen</h3>
               </div>
             </a>
           
+            <a href="#" class="project-card">
+            <span class="project-badge">In Arbeit</span>
+              <img src="images/web1.png" alt="web1" class="project-card-image">
+              <div class="project-card-info">
+                <h3>Web 1 News-Projekt funktionaler Anmeldescreen</h3>
+              </div>
+            </a>
 
+            <a href="#" class="project-card">
+            <span class="project-badge">In Arbeit</span>
+              <img src="images/web1_1.png" alt="web1_1" class="project-card-image">
+              <div class="project-card-info">
+                <h3>Web 1 News-Projekt Dashboard/Startseite</h3>
+              </div>
+            </a>
           
             <a href="#" class="project-card">  
               <img src="images/rogue1.png" alt="rogue1" class="project-card-image">
               <div class="project-card-info">
-                <h3 class="project-card-title">RR Gamestart</h3>
+                <h3>RR Gamestart</h3>
                 </div>
             </a>
           
@@ -113,7 +135,7 @@
             <a href="#" class="project-card">  
               <img src="images/rogue2.png" alt="rogue2" class="project-card-image">
               <div class="project-card-info">
-                <h3 class="project-card-title">RR UI-Elemente</h3>
+                <h3>RR UI-Elemente</h3>
             </div>
             </a>
           
@@ -122,7 +144,7 @@
             <a href="#" class="project-card">  
               <img src="images/rogue3.png" alt="rogue3" class="project-card-image">
               <div class="project-card-info">
-                <h3 class="project-card-title">RR Level Generation</h3>
+                <h3>RR Level Generation</h3>
               </div>
             </a>
             
@@ -130,6 +152,7 @@
         </article>
 
     <article id="focus" class="container">
+      <div>
       <h2>Fokus auf Web-Development und Spieleentwicklung.</h2>
         <p>Meine Projekte versuchen eine breite Palette der Moeglichkeiten im Web Development sowie
           in der Spieleentwicklung
@@ -137,16 +160,59 @@
           JavaScript Frameworks wie React, Vue.js und Angular. Auch in Backend-Technologien
           bin ich stets interessiert. Egal welches Tool ich nutze, mein Ziel ist immer
           dasselbe: sauberen, effizienten Code schreiben, der für alle funktioniert und
-          nicht unnötig viel Strom verbraucht. Ich lerne gerade super viel und freue
+          nicht unnötig viel Strom verbraucht. Ich lern gerade super viel und freue
           mich darauf, dieses Wissen in coolen Projekten anzuwenden!
         Ich bin immer offen für neue Herausforderungen und freue mich darauf,
         meine Fähigkeiten weiter zu verbessern und auszubauen. Wenn du Fragen hast
         oder einfach nur plaudern möchtest, zögere nicht, mich zu kontaktieren!
       </p>
+      </div>
+
+      <img src="images/a07-pathtracing1.png" alt="pathtracing1">
+    </article>
+
+    <article id="programminglanguages" class="container">
+      
+      <h2>Meine Programmierkenntnisse</h2>
+
+      
+      <div class="skills-list">
+        <div class="skill-item">
+        <h3>HTML & CSS</h3>
+        <div class="skill-bar-bg">
+        <div class="level-30"></div>
+        </div>
+        <span>Grundkenntnisse</span>
+      </div>
+
+
+      <div class="skill-item">
+        <h3>JavaScript/TypeScript</h3>
+        <div class="skill-bar-bg">
+        <div class="level-20"></div>
+        </div>
+        <span>Beginner</span>
+      </div>
+
+
+      <div class="skill-item">
+        <h3>Java</h3>
+        <div class="skill-bar-bg">
+        <div class="level-40"></div>
+        </div>
+        <span>Fortgeschritten</span>
+      </div>
+    </div>
+
+    <aside>
+      <a href="#top">Nach oben</a>
+    </aside>
+
+
     </article>
 
         <footer class="footer">
-          <ul class="footerlinks">
+          <ul>
             <li><a href="forms.html">Kontaktformular</a></li>
             <li><a href="impressum.html">Impressum</a></li>
           </ul> 

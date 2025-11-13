@@ -1,64 +1,65 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <!-- Metainformationen -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontaktformular</title>
     <meta name="author" content="Yakup Orhan Tas">
     <meta name="description" content="Kontaktformular">
     
-    <link rel="stylesheet" href="styles/01styles.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
 
   <body>
 
     
-    <div class="container">
-      <header class="main-header">
-          <nav class="main-nav">
-            <ul>
-              <li><a href="index.html">Homepage</a></li>
-            </ul>
-          </nav>
-        </header>
-    </div>
-    
-    <main>
+    <header class="main-header"> 
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Homepage</a></li>
+          </ul>
+        </nav>
+    </header>
 
-      <section class="hero container">
-        <h1 class="hero-title">
+    
+    <main class="container"> 
+      
+
+      <section class="hero">
+        <h1>
           Kontaktformular
         </h1>
-        <p class="hero-subtitle">
+        <p>
           Kontaktiere mich jederzeit!
         </p>
       </section>
 
-      <form action="index.html" method="get">
-
-      <article id="contact">
-        <h2>Kontaktiere mich!</h2>
+      
+        
         <div id="introductionsentence">
-        <p>
-          Du kannst mich jederzeit per E-Mail unter
-          <em>orhantas3818@outlook.de</em>
-        </p>
-        <p>oder über mein LinkedIn Profil: ...</p>
-        <p>
-          mein Githubprofil:
-          <a href="https://github.com/Otigo04">https://github.com/Otigo04</a>
-        </p>
-        <p>oder Kontaktiere mich über folgendes Formular direkt:</p>
+          <p>
+            Du kannst mich jederzeit per E-Mail unter
+            <em>orhantas3818@outlook.de</em>
+          </p>
+          <p>oder über mein LinkedIn Profil: ...</p>
+          <p>
+            mein Githubprofil:
+            <a href="https://github.com/Otigo04">https://github.com/Otigo04</a>
+          </p>
+          <p>oder Kontaktiere mich über folgendes Formular direkt:</p>
         </div>
+
+        <form action="index.html" method="get">
           <fieldset>
             <legend>Kontaktformular</legend>
+            
             <label for="title">Anrede</label>
             <select name="titles" id="title">
               <option value="Herr">Herr</option>
               <option value="Frau">Frau</option>
               <option value="Divers">Divers</option>
             </select>
+            
             <label for="vorname">Vorname:</label>
             <input
               type="text"
@@ -68,6 +69,7 @@
               maxlength="25"
               required
             >
+            
             <label for="nachname">Nachname:</label>
             <input
               type="text"
@@ -77,6 +79,7 @@
               maxlength="25"
               required
             >
+            
             <label for="geburtsdatum">Geburtsdatum:</label>
             <input
               type="date"
@@ -86,6 +89,7 @@
               min="1900-01-01"
               required
             >
+            
             <label for="email">E-Mail:</label>
             <input
               type="email"
@@ -94,6 +98,7 @@
               placeholder="Deine E-Mail..."
               required
             >
+            
             <label for="phone">Telefon:</label>
             <input
               type="tel"
@@ -116,30 +121,16 @@
             <fieldset id="art">
               <legend>Welche Art von Webseite benötigst du?</legend>
               <div id="websitetypes">
-              <input
-                type="radio"
-                id="portfolio"
-                name="websitestyle"
-                value="Portfolio"
-              >
+              <input type="radio" id="portfolio" name="websitestyle" value="Portfolio">
               <label for="portfolio">Portfolio</label>
 
               <input type="radio" id="blog" name="websitestyle" value="Blog">
               <label for="blog">Blog</label>
 
-              <input
-                type="radio"
-                id="onlineshop"
-                name="websitestyle"
-                value="Onlineshop"
-              >
+              <input type="radio" id="onlineshop" name="websitestyle" value="Onlineshop">
               <label for="onlineshop">Onlineshop</label>
-              <input
-                type="radio"
-                id="landingpage"
-                name="websitestyle"
-                value="Landingpage"
-              >
+              
+              <input type="radio" id="landingpage" name="websitestyle" value="Landingpage">
               <label for="landingpage">Landingpage</label>
 
               <input type="radio" id="sonstiges" name="websitestyle" value="Sonstiges">
@@ -158,23 +149,17 @@
             ></textarea>
             
             <div class="newsletterclass">
-            <input
-              type="checkbox"
-              id="newsletter"
-              name="newsletter"
-              value="Ja"
-            >
-            <label for="newsletter" id="newslettertext"
-              >(optional) Ich möchte den Newsletter abonnieren.</label>
+              <input type="checkbox" id="newsletter" name="newsletter" value="Ja">
+              <label for="newsletter">(optional) Ich möchte den Newsletter abonnieren.</label>
             </div>
 
             <input type="submit" value="Absenden">
             <input type="reset" value="Zurücksetzen">
           </fieldset>
-          </article>
         </form>
-        
-      
+
+
     </main>
+
   </body>
 </html>
