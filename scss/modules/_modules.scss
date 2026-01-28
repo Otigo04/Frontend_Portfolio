@@ -1,5 +1,5 @@
 // module für wiederverwendbare komponenten
-.main-nav ul {
+nav > ul {
     list-style: none;
     display: flex;
     flex-flow: row nowrap;
@@ -7,6 +7,7 @@
     width: 90%;
     max-width: var(--content-width);
     margin: 0 auto;
+    font-weight: 700;
 }
 
 .main-nav a {
@@ -83,9 +84,14 @@
     }
 }
 
-.level-20 { width: 20%; }
-.level-30 { width: 30%; }
-.level-40 { width: 40%; }
+
+$skill-levels: 20, 30, 40, 50, 60, 70, 80, 90;
+// schleife für skill levels
+@each $level in $skill-levels {
+    .level-#{$level} {
+        width: $level * 1%; 
+    }
+}
 
 // formularbereich
 input, button, textarea, select { 

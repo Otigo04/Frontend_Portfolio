@@ -15,7 +15,7 @@
         gap: var(--spacing-medium);
     }
 
-.main-header {
+header {
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -119,6 +119,6 @@ footer {
     top: 0;
     left: 0;
     height: 5px;
-    background-color: red !important;
+    background-color: red;
     z-index: 9999;
 }

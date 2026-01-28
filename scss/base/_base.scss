@@ -1,4 +1,5 @@
 // base styles für das gesamte projekt
+// organisiert mit SMACSS (Scalable and Modular Architecture for CSS)
 
 *,
 *::after,
@@ -34,6 +35,16 @@
     --scroll-percent: 0%;
 }
 
+// fadein animation bei neuladen der seite mit @keyframes
+@keyframes fadeIn {
+    from { 
+        opacity: 0; transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; transform: translateY(0); 
+    }
+}
+
 html {
     font-size: 1rem; 
     scroll-behavior: smooth;
@@ -45,6 +56,8 @@ body {
     background-color: var(--color-background);
     line-height: var(--line-height-base);
     min-block-size: 100vh;
+    // animation: name dauer verzögerungsart (ease-out: schnell start, langsam ende)
+    animation: fadeIn 0.8s ease-out;
 }
 
 h1, h2, h3, h4 {
