@@ -1,3 +1,5 @@
+// base styles für das gesamte projekt
+
 *,
 *::after,
 *::before {
@@ -5,6 +7,7 @@
     margin: 0;
     padding: 0;
 }
+
 
 :root {
     --color-background: rgb(255, 255, 255);
@@ -26,6 +29,9 @@
     --spacing-medium: 2rem;
     --spacing-large: 4rem;
     --line-height-base: 1.6;
+
+    // für js animation scroll
+    --scroll-percent: 0%;
 }
 
 html {
@@ -46,12 +52,14 @@ h1, h2, h3, h4 {
     line-height: 1.2;
     margin-bottom: var(--spacing-small);
     text-wrap: balance;
+    padding: 0 1rem;
 }
 
 p {
     margin-bottom: var(--spacing-small);
     max-inline-size: 60ch;
     text-wrap: pretty;
+    padding: 0 1rem;
 }
 
 ul, ol {
@@ -67,14 +75,7 @@ li {
 a {
     color: var(--color-primary);
     text-decoration: none; 
-    transition: color 0.3s ease;
     cursor: pointer; 
-}
-
-a:hover,
-a:focus {
-    color: var(--color-accent);
-    text-decoration: underline;
 }
 
 img,
@@ -84,65 +85,6 @@ video {
     display: block;
     max-inline-size: 100%;
     height: auto;
-}
-
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
-
-form {
-    max-width: 100%;
-    font-family: var(--font-family-sans);
-}
-
-input {
-    width: 100%;
-    padding: 1em;
-    margin: var(--spacing-medium) 0;
-    display: block;
-}
-
-textarea {
-    width: 100%;
-    height: 150px;
-    font-family: var(--font-family-sans);
-}
-
-fieldset {
-    border: 1px solid var(--color-border);
-    padding: var(--spacing-medium);
-    margin-bottom: var(--spacing-large);
-}
-
-legend {
-    font-size: 1.125rem;
-    font-weight: 700;
-    padding: 0 var(--spacing-medium);
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-    outline: none;
-    border-color: var(--color-text);
-    box-shadow: 0 0 0 2px rgba(136, 136, 136, 0.2);
-}
-
-input[type="submit"],
-input[type="reset"],
-button {
-    background-color: rgba(184, 174, 174, 0.758);
-    cursor: pointer;
-    transition: 1s ease;
-}
-
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-button:hover {
-    background-color: rgb(99, 138, 199);
 }
 
 table {
@@ -170,42 +112,12 @@ th {
     letter-spacing: 0.05em;
 }
 
-tbody tr:hover {
-    background-color: var(--color-border);
-}
-
-.footer ul,
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    flex-flow: row nowrap;
-    gap: var(--spacing-medium);
-}
-
-.main-nav ul {
-    width: 90%;
-    max-width: var(--content-width);
-    margin: 0 auto;
-}
-
-.footer {
-    text-align: center;
-    padding: var(--spacing-medium);
-    border-top: 1px solid var(--color-border);
-    font-size: 0.875rem;
-    color: var(--color-accent);
-}
-
-.footer ul {
-    justify-content: center;
-}
-
-.footer a {
-    color: var(--color-accent);
-    text-decoration: none;
-}
-
-.footer a:hover,
-.footer a:focus {
-    text-decoration: underline;
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--scroll-percent);
+    height: 5px;
+    background-color: var(--color-primary);
+    z-index: 1000;
 }

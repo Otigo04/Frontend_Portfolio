@@ -1,0 +1,124 @@
+// layout styles für die seitenstruktur
+
+.container {
+    width: 90%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding-top: var(--spacing-large);
+    padding-bottom: var(--spacing-large);
+}
+
+@mixin flex-center-mit-gap {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: var(--spacing-medium);
+    }
+
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    justify-content: space-between;
+    padding: var(--spacing-medium) 0;
+    background-color: hsl(0, 0%, 90%);
+}
+
+.hero {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-large);
+
+    > div {flex-basis: 65%;
+        
+    
+        > h1 {
+            font-size: var(--font-size-hero);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: var(--spacing-medium);
+        }
+
+        > p {
+            font-size: var(--font-size-xl);
+            font-weight: 400;
+            color: var(--color-accent);
+        }
+    }
+
+    > img {
+        max-width: 450px; 
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+#focus {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-large);
+    
+    > img {
+        max-width: 400px; 
+        height: auto;
+        border-radius: 10px;
+    }
+
+    > div {
+        flex-basis: 65%;
+
+        > h2 {
+            margin-bottom: var(--spacing-medium);
+        }
+    }
+}
+
+//usage von mixins
+
+.portfolio-grid {
+    @include flex-center-mit-gap;
+}
+
+article#whoami > p {
+    margin-bottom: var(--spacing-large);
+    margin-top: var(--spacing-medium);
+    padding: 0 1rem;
+}
+
+article#projekte > h2 {
+    font-size: var(--font-size-xxl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-medium);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 1rem;
+}
+
+aside {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: hsl(0, 1%, 75%);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+footer {
+    text-align: center;
+    padding: var(--spacing-medium);
+    border-top: 1px solid var(--color-border);
+    font-size: 0.875rem;
+    color: var(--color-accent);
+}
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background-color: red !important;
+    z-index: 9999;
+}

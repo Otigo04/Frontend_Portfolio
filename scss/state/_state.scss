@@ -1,0 +1,80 @@
+// state styles für interaktive Elemente
+
+@mixin hover-lift($scale: 1.02, $moveY: -5px) {
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+    
+    &:hover {
+        transform: scale($scale) translateY($moveY);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+} // Hilfe von KI war hier mit dabei
+
+
+#whoami {
+    @include hover-lift(1.01, 0);
+}
+
+#projekte {
+    @include hover-lift(1, -5px);
+}
+
+.project-card {
+    @include hover-lift(1.03, -8px);
+    
+    background: radial-gradient(
+        circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+        rgba(136, 136, 136, 0.25) 0%, 
+        transparent 80%
+    ), #fff; 
+}
+
+
+#table {
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.4s ease-out;
+}
+
+#table:hover {
+    transform: translateY(-5px);
+    opacity: 0.95;
+}
+
+#focus img {
+    transition: transform 0.5s ease;
+}
+
+#focus:hover img {
+    transform: scale(1.05) rotate(1deg);
+}
+
+a:hover,
+a:focus {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+tbody tr:hover {
+    background-color: var(--color-border);
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: rgb(99, 138, 199);
+}
+
+.project-card {
+    @include hover-lift(1.03, -8px);
+}
+
+.project-card {
+    background: radial-gradient(
+        circle at var(--mouse-x) var(--mouse-y), 
+        rgba(136, 136, 136, 0.15) 0%, 
+        transparent 80%
+    );
+}
+
+.project-card:hover .project-card-image,
+.project-card:focus .project-card-image {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
