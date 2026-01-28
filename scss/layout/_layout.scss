@@ -58,6 +58,7 @@ header {
 #focus {
     display: flex;
     flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     gap: var(--spacing-large);
@@ -83,10 +84,14 @@ header {
     @include flex-center-mit-gap;
 }
 
-article#whoami > p {
-    margin-bottom: var(--spacing-large);
-    margin-top: var(--spacing-medium);
-    padding: 0 1rem;
+article#whoami > section {
+    display: flex;
+    justify-content: space-between;
+    > p {
+        margin-bottom: var(--spacing-large);
+        margin-top: var(--spacing-medium);
+        padding: 0 1rem;
+    }
 }
 
 article#projekte > h2 {

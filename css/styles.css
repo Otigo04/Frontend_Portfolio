@@ -172,6 +172,7 @@ header {
 #focus {
   display: flex;
   flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
   gap: var(--spacing-large);
@@ -195,7 +196,11 @@ header {
   gap: var(--spacing-medium);
 }
 
-article#whoami > p {
+article#whoami > section {
+  display: flex;
+  justify-content: space-between;
+}
+article#whoami > section > p {
   margin-bottom: var(--spacing-large);
   margin-top: var(--spacing-medium);
   padding: 0 1rem;
